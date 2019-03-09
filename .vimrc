@@ -27,7 +27,7 @@ set shiftwidth=4
 set expandtab
 syntax on
 colo onedark
-set number
+set number relativenumber
 
 "Nerdtree
 map <C-n> :NERDTreeToggle<CR>
