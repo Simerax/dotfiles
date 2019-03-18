@@ -29,6 +29,10 @@ syntax on
 colo onedark
 set number relativenumber
 
+" remap :w to Ctrl + S in normal and insert mode
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+
 "Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 

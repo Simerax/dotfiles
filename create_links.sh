@@ -4,4 +4,5 @@ ln -s "$repo_path/.vimrc" ~/.vimrc
 ln -s "$repo_path/.tmux.conf" ~/.tmux.conf
 ln -s "$repo_path/.bash_aliases" ~/.bash_aliases
 ln -s "$repo_path/.quassel" ~/.quassel
+ln -s "$repo_path/.zshrc" ~/.zshrc
 
