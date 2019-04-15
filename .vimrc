@@ -33,6 +33,11 @@ set number relativenumber
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
 
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
+
 "Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
