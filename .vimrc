@@ -47,5 +47,8 @@ let g:crystal_auto_format=1
 autocmd Filetype crystal setlocal ts=2 sw=2 expandtab
 
 
+" Perl Language Settings
+autocmd BufRead *.t set filetype=perl
+
 
 let g:clang_library_path='/usr/lib/llvm-6.0/lib'
