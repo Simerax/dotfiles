@@ -12,5 +12,5 @@ do
 done
 
 # i3wm config
-create_link "$repo_path/config" ~/.config/i3/config
+create_link "$repo_path/i3/config" ~/.config/i3/config
 
