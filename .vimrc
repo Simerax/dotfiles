@@ -18,6 +18,8 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-lua-ftplugin'
 call vundle#end()
 filetype plugin indent on
 " VUNDLE.VIM END
