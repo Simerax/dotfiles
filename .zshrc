@@ -101,3 +101,5 @@ export GOPATH="/home/xaver/gocode"
 
 # make stty not block on CTRL + S (https://unix.stackexchange.com/questions/72086/ctrl-s-hang-terminal-emulator)
 stty -ixon
+
+transset -a 0.9
