@@ -104,7 +104,7 @@ set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
 set $workspace9 "9: "
-set $workspace10 "10: "
+set $workspace10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -135,6 +135,8 @@ for_window [class = "Spotify"] move to workspace $workspace7
 assign [class="Firefox-esr"] $workspace9
 assign [class="Evolution"] $workspace2
 assign [class="Code"] $workspace8
+assign [class="TeamSpeak 3"] $workspace10
+assign [class="discord"] $workspace10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
