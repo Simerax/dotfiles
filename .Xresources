@@ -22,7 +22,5 @@ rofi.fake-transparency: false
 rofi.yoffset:           0
 rofi.xoffset:           0
 rofi.width:             1366
-!  rofi.opacity:           10
-!  rofi.font:              SourceCodePro-Regular 12
 
 
