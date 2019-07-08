@@ -175,7 +175,7 @@ bindsym $mod+r mode "resize"
 # XAVERXAVER Custom programs
 exec_always feh --bg-scale /home/xaver/Bilder/Backgrounds/space_01.png
 
-exec_always xrandr --output DVI-D-0 --off --output HDMI-0 --mode 5120x1440 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off --dpi
+exec_always xrandr --output DVI-D-0 --off --output HDMI-0 --mode 5120x1440 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off 
 
 exec_always mouse_sensitivity
 
@@ -209,7 +209,7 @@ bar {
     }
 }
 
-bindsym $mod+s exec rofi -show run
+bindsym $mod+d exec rofi -show run
 
 # make window transparency work
 exec compton
