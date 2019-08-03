@@ -30,6 +30,10 @@
                 - curl
                 - git
                 - spotify-client
+                - xclip
+                - dunst
+                - libnotify-bin # for notify-send command
+                - redshift
 
       # Installing OhMyZsh
       # check if zsh is already installed            
@@ -45,4 +49,10 @@
         # Setup dotfile links
       - name: Create dotfile links
         local_action: command ./create_links.sh
+
+      - name: "setup ~/.config folder"
+        local_action: command cp -r .config/. ~/.config/
+        
+      - name: "setup ~/.scripts folder"
+        local_action: command perl setup_scripts.pl
 
