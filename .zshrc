@@ -98,6 +98,8 @@ alias cls="clear"
 alias xx="exit"
 
 export GOPATH="/home/xaver/gocode"
+export EDITOR="vim"
+export RANGER_LOAD_DEFAULT_RC=false
 
 # make stty not block on CTRL + S (https://unix.stackexchange.com/questions/72086/ctrl-s-hang-terminal-emulator)
 stty -ixon
