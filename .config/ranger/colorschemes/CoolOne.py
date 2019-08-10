@@ -1,9 +1,3 @@
-# based on the zenburn colorscheme from ranger
-# https://github.com/ranger/colorschemes/blob/master/zenburn.py
-# 
-# So far only minor changes. This theme will probably look really akward in some situations
-# I will update/fix it as soon as i run into those situations
-
 from ranger.gui.colorscheme import ColorScheme
 from ranger.gui.color import default_colors, reverse, bold, normal, default
 

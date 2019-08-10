@@ -6,11 +6,19 @@ function create_link {
     ln -sfn $1 $2
 }
 
-find $repo_path -name '.*' | grep -v '.git' | while read file
+function fake_link {
+    echo "$1 -> $2"
+}
+
+# list all entries, awk the name, dont grep .git and '.' & '..' and only use stuff that starts with '.'
+ls -la "$repo_path" | awk '{print $9}' | grep -P -v '^\.\.?$|^.git$' | grep '^\.' | while read file
 do
-    create_link "$file" ~/$(basename $file)
+    create_link "$repo_path/$file" ~/$(basename $file)
 done
 
-# i3wm config
-create_link "$repo_path/i3/config" ~/.config/i3/config
+# .config folder
+ls "$repo_path/.config" | tr " " "\n" | while read thing
+do
+    create_link "$repo_path/.config/$thing" ~/.config/$(basename $thing)
+done
 
