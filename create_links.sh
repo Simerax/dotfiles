@@ -6,10 +6,6 @@ function create_link {
     ln -sfn $1 $2
 }
 
-function fake_link {
-    echo "$1 -> $2"
-}
-
 # list all entries, awk the name, dont grep .git and '.' & '..' and only use stuff that starts with '.'
 ls -la "$repo_path" | awk '{print $9}' | grep -P -v '^\.\.?$|^.git$' | grep '^\.' | while read file
 do
