@@ -22,16 +22,20 @@ class CoolOne(ColorScheme):
             if context.border:
                 fg = 248
             if context.image:
-                fg = 109
+                # fg = 109
+                attr |= bold
+                fg = 200
             if context.video:
                 fg = 66
             if context.audio:
                 fg = 116
             if context.document:
-                fg = 151
+                # fg = 151
+                fg = 7
             if context.container:
                 attr |= bold
-                fg = 174
+                # fg = 174
+                fg = 208
             if context.directory:
                 attr |= bold
                 # fg = 223
