@@ -1,0 +1,7 @@
+#!/bin/bash
+output=$@
+if [ -z "$@" ]
+then
+    output="Abc 123"
+fi
+find . -regextype egrep -regex ".*.flf$" -exec figlet -w 250 -f {} $output \; -exec echo {} \;
