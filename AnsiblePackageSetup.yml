@@ -34,6 +34,7 @@
                 - dunst
                 - libnotify-bin # for notify-send command
                 - redshift
+                - sxiv
 
       # Installing OhMyZsh
       # check if zsh is already installed            
