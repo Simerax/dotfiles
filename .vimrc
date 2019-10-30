@@ -20,6 +20,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
+Plugin 'vim-airline/vim-airline'
 call vundle#end()
 filetype plugin indent on
 " VUNDLE.VIM END
@@ -54,3 +55,5 @@ autocmd BufRead *.t set filetype=perl
 
 
 let g:clang_library_path='/usr/lib/llvm-6.0/lib'
+
+let g:airline_powerline_fonts = 1
