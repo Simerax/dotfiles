@@ -21,6 +21,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'vim-airline/vim-airline'
+Plugin 'igankevich/mesonic'
+Plugin 'neoclide/coc.nvim', {'pinned': 1}
 call vundle#end()
 filetype plugin indent on
 " VUNDLE.VIM END
