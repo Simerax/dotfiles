@@ -1,4 +1,11 @@
 #!/bin/sh
 
-grep -v "#" ~/.config/emoji | dmenu -i -l 20 -fn Hack | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
-notify-send "Clipboard" "$(xclip -o -selection clipboard) copied to clipboard"
+emoji=$(grep -v "#" ~/.config/emoji | rofi -dmenu | awk '{print $1}' | tr -d '\n')
+
+if [ -z "$emoji" ]
+then
+    notify-send "Emoji not copied"
+else
+    echo $emoji | xclip -selection clipboard
+    notify-send "Emoji '$(xclip -o -selection clipboard)' copied"
+fi
