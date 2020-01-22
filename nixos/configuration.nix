@@ -46,19 +46,23 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.sessionVariables.TERMINAL = ["uxrvt"];
+  environment.sessionVariables.TERMINAL = ["termite"];
   environment.systemPackages = with pkgs; [
     wget
     git
     i3
     wpa_supplicant
+    vim # basically only for easier setup of vundle
     neovim
     vimPlugins.vundle
-    rxvt_unicode # uxrvt
+    termite
     zsh
     oh-my-zsh
     xorg.transset # terminal transparency - see .zshrc
     firefox
+    neofetch
+    feh
+    xorg.xev
   ];
 
   fonts.fonts = with pkgs; [
@@ -101,28 +105,39 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.layout = "de";
-  services.xserver.xkbOptions = "eurosign:e";
+  # I don't want the damn "askpass" program
+  programs.ssh.askPassword = "";
 
   # Enable touchpad support.
-  # services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
-  # Enable the KDE Desktop Environment.
-  services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
+  environment.pathsToLink = ["/libexec"];
 
-  services.xserver.windowManager.i3 = {
+  services.xserver = {
     enable = true;
-    extraPackages = with pkgs; [
-      i3status
-      i3lock
-      compton # for transparency
-      rofi-unwrapped # dmenu alternative
-    ];
-  };
+    layout = "de";
+    xkbOptions = "eurosign:e";
+    displayManager.sddm = {
+      enable = true;
+    };
 
+    desktopManager = {
+      xterm.enable = false;
+      plasma5 = {
+        enable = true;
+      };
+    };
+
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        i3status
+        i3lock
+        compton # for transparency
+        rofi-unwrapped # dmenu alternative
+      ];
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.xaver = {
