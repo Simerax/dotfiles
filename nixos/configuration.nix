@@ -50,7 +50,6 @@
   environment.systemPackages = with pkgs; [
     wget
     git
-    i3
     wpa_supplicant
     vim # basically only for easier setup of vundle
     neovim
@@ -58,7 +57,6 @@
     termite
     zsh
     oh-my-zsh
-    xorg.transset # terminal transparency - see .zshrc
     firefox
     neofetch
     feh
@@ -129,6 +127,7 @@
     };
 
     windowManager.i3 = {
+      package = pkgs.i3-gaps; #lets actually use i3-gaps instead of regular i3
       enable = true;
       extraPackages = with pkgs; [
         i3status

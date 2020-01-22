@@ -97,11 +97,7 @@ source $ZSH/oh-my-zsh.sh
 alias cls="clear"
 alias xx="exit"
 
-export GOPATH="/home/xaver/gocode"
-export EDITOR="vim"
-export RANGER_LOAD_DEFAULT_RC=false
+export EDITOR="nvim"
 
 # make stty not block on CTRL + S (https://unix.stackexchange.com/questions/72086/ctrl-s-hang-terminal-emulator)
 stty -ixon
-
-transset -a 0.9
