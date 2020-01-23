@@ -6,6 +6,10 @@
 
   environment.pathsToLink = ["/libexec"];
 
+  environment.systemPackages = let themes = pkgs.callPackage ../nixpkgs/pkgs/sddm-themes.nix {}; in [
+    themes.sddm-abstract-dark
+  ];
+
   services.xserver = {
     enable = true;
     libinput.enable = true; # Enable touchpad support. Otherwise the mouse is stuck under xfce - somehow i dont need this on plasma5
@@ -13,6 +17,7 @@
     xkbOptions = "eurosign:e";
     displayManager.sddm = {
       enable = true;
+      theme = "abstract-dark";
     };
 
     desktopManager = {
