@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # ./modules/i3-gaps.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -124,9 +125,12 @@
     };
 
     desktopManager = {
+      default = "xfce";
       xterm.enable = false;
-      plasma5 = {
+      xfce = {
         enable = true;
+        noDesktop = true;
+        enableXfwm = false;
       };
     };
 
