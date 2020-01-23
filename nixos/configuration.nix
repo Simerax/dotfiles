@@ -8,7 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # ./modules/i3-gaps.nix
+      ./modules/i3.nix
+      ./modules/shell.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -49,7 +50,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.sessionVariables.TERMINAL = ["termite"];
   environment.systemPackages = with pkgs; [
     wget
     git
@@ -57,9 +57,6 @@
     vim # basically only for easier setup of vundle
     neovim
     vimPlugins.vundle
-    termite
-    zsh
-    oh-my-zsh
     firefox
     neofetch
     feh
@@ -68,27 +65,7 @@
     spotify
   ];
 
-  fonts.fonts = with pkgs; [
-    font-awesome # for all the icons used in my i3config
-    powerline-fonts # Zsh Agnoster Theme 
-  ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
-  programs.zsh = {
-    enable = true;
-    promptInit = "";
-    interactiveShellInit = "";
-    ohMyZsh = {
-      enable = true;
-      theme = "agnoster";
-      plugins = [
-        "git"
-      ];
-    };
-  };
 
   # List services that you want to enable:
 
@@ -108,43 +85,6 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # I don't want the damn "askpass" program
-  programs.ssh.askPassword = "";
-
-  # Enable touchpad support.
-  services.xserver.libinput.enable = true;
-
-  environment.pathsToLink = ["/libexec"];
-
-  services.xserver = {
-    enable = true;
-    layout = "de";
-    xkbOptions = "eurosign:e";
-    displayManager.sddm = {
-      enable = true;
-    };
-
-    desktopManager = {
-      default = "xfce";
-      xterm.enable = false;
-      xfce = {
-        enable = true;
-        noDesktop = true;
-        enableXfwm = false;
-      };
-    };
-
-    windowManager.i3 = {
-      package = pkgs.i3-gaps; #lets actually use i3-gaps instead of regular i3
-      enable = true;
-      extraPackages = with pkgs; [
-        i3status
-        i3lock
-        compton # for transparency
-        rofi-unwrapped # dmenu alternative
-      ];
-    };
-  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.xaver = {
