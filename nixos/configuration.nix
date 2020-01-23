@@ -44,6 +44,8 @@
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
+  nixpkgs.config.allowUnfree = true; # Spotify isn't a free package
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.sessionVariables.TERMINAL = ["termite"];
@@ -61,6 +63,8 @@
     neofetch
     feh
     xorg.xev
+    keepass
+    spotify
   ];
 
   fonts.fonts = with pkgs; [
