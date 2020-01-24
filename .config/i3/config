@@ -13,7 +13,7 @@ set $mod Mod4
 
 set $font "Hack"
 set $font_size 13
-set $font_size_status_bar 15
+set $font_size_status_bar 11
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:$font $font_size
@@ -171,14 +171,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-set $mode_system System (s)hutdown, (r)eboot
+set $mode_system System (s)hutdown, (r)eboot, (l)ogout
 mode "$mode_system" {
     bindsym s exec --no-startup-id systemctl poweroff
     bindsym r exec --no-startup-id systemctl reboot
+    bindsym l exec --no-startup-id loginctl terminate-user $USER
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Pause mode "$mode_system"
+bindsym XF86Launch1 mode "$mode_system"
 
 
 bindsym $mod+ctrl+l exec i3lock -i ~/.config/images/lockscreen.png
@@ -225,3 +226,8 @@ bindsym $mod+p exec emoji_finder.sh
 # make window transparency work
 exec compton
 exec redshift
+
+gaps inner 10
+gaps outer 10
+
+for_window [class=".*"] border pixel 1 # remove top bar

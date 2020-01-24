@@ -1,4 +1,3 @@
-#!/bin/bash
 repo_path=$(dirname $(readlink -f $0))
 
 function create_link {
