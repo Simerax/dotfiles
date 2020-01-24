@@ -38,7 +38,7 @@
         i3lock
         compton # for transparency
         rofi-unwrapped # dmenu alternative
-        feh # background images
+        nitrogen # background images
       ];
     };
   };
