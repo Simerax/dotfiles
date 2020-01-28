@@ -63,6 +63,7 @@
     xorg.xev
     keepass
     spotify
+    arandr
   ];
 
 
