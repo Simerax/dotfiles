@@ -36,7 +36,7 @@ set number relativenumber
 
 " remap :w to Ctrl + S in normal and insert mode
 nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>
+inoremap <C-s> <Esc>:w<CR>i
 
 map <C-h> <C-W>h
 map <C-j> <C-W>j
