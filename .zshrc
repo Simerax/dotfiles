@@ -101,3 +101,7 @@ export EDITOR="nvim"
 
 # make stty not block on CTRL + S (https://unix.stackexchange.com/questions/72086/ctrl-s-hang-terminal-emulator)
 stty -ixon
+
+# plenv https://github.com/tokuhirom/plenv
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
