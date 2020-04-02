@@ -95,16 +95,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # see https://fontawesome.com/v4.7.0/cheatsheet/
-set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
-set $workspace4 "4: "
-set $workspace5 "5: "
-set $workspace6 "6: "
-set $workspace7 "7: "
-set $workspace8 "8: "
-set $workspace9 "9: "
-set $workspace10 "10: "
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -197,6 +197,7 @@ bindsym $mod+ctrl+l exec i3lock -i ~/.config/images/lockscreen.png
 exec_always nitrogen --set-zoom-fill ~/.config/images/background.png
 
 exec_always ~/.screenlayout/standard.sh
+exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 
 exec_always mouse_sensitivity
@@ -218,18 +219,6 @@ client.unfocused        $inactive_bg_color  $inactive_bg_color  $text_color     
 client.focused_inactive $inactive_bg_color  $inactive_bg_color  $text_color     $inactive_bg_color
 client.urgent           $urgent_bg_color    $urgent_bg_color    $text_color     $urgent_bg_color
 
-bar {
-    font pango:$font $font_size_status_bar
-    status_command i3status -c ~/.i3status.conf
-    colors {
-        background $bg_color
-        separator #757575
-        #                   Border              Background          Text
-        focused_workspace   $bg_color           $bg_color           $text_color
-        inactive_workspace  $inactive_bg_color  $inactive_bg_color  $inactive_text_color
-        urgent_workspace    $urgent_bg_color    $urgent_bg_color    $text_color
-    }
-}
 
 bindsym $mod+d exec rofi -show run
 bindsym $mod+p exec emoji_finder.sh
