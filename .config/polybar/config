@@ -58,7 +58,7 @@ font-3 = "FontAwesome:pixelsize=11;1"
 
 modules-left = i3
 modules-center = date
-modules-right = wlan eth filesystem alsa cpu 
+modules-right = music wlan eth filesystem alsa cpu
 
 tray-position = left
 tray-padding = 2
@@ -230,6 +230,13 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
+[module/music]
+type = custom/script
+exec = mpc current
+interval = 5
+label = %output%
+format = <label>
+click-left = mpc toggle
 
 [settings]
 screenchange-reload = true
