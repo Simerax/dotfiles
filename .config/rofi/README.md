@@ -1,4 +1,4 @@
-# Huge thanks to Aditya Shakya (adi1090x) & Martin B. Frage (mbfraga)!
+# Huge thanks to Aditya Shakya (adi1090x) & Martin B. Fraga (mbfraga)!
 The themes/scripts I use are mostly copied and just slightly modified for my environment
 
 ## [mbfraga](https://github.com/mbfraga)
