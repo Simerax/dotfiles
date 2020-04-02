@@ -236,7 +236,7 @@ exec = mpc current
 interval = 5
 label = %output%
 format = <label>
-click-left = mpc toggle
+click-left = ~/.config/rofi/scripts/mpd.sh
 
 [settings]
 screenchange-reload = true

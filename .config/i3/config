@@ -221,6 +221,8 @@ client.urgent           $urgent_bg_color    $urgent_bg_color    $text_color     
 
 
 bindsym $mod+d exec rofi -show run -theme ~/.config/rofi/themes/flat-orange.rasi
+bindsym $mod+x exec i3-sensible-terminal -e "bash -c ncmpcpp"
+bindsym $mod+m exec --no-startup-id ~/.config/rofi/scripts/mpd.sh
 bindsym $mod+p exec emoji_finder.sh
 
 
