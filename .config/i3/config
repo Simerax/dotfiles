@@ -138,6 +138,7 @@ assign [class="Mail"] $workspace2
 assign [class="Code"] $workspace8
 assign [class="TeamSpeak 3"] $workspace10
 assign [class="discord"] $workspace10
+assign [class="Steam"] $workspace3
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
