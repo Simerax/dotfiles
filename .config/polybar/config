@@ -23,7 +23,7 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #d75f00
 secondary = #e60053
 alert = #bd2c40
 
@@ -58,7 +58,7 @@ font-3 = "FontAwesome:pixelsize=11;1"
 
 modules-left = i3
 modules-center = date
-modules-right = music wlan eth filesystem alsa cpu
+modules-right = mpd wlan eth filesystem alsa cpu
 
 tray-position = left
 tray-padding = 2
@@ -133,7 +133,7 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %index% %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -143,16 +143,22 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next> <icon-repeat> <icon-random>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-prev = "  "
+icon-stop = "  "
+icon-play = "  "
+icon-pause = "  "
+icon-next = "  "
+icon-repeat = "  "
+icon-random = "  "
 
-label-song-maxlen = 25
+label-offline = "mpd is offline"
+
+label-song-maxlen = 200
 label-song-ellipsis = true
+
+toggle-on-foreground = ${colors.primary}
 
 [module/cpu]
 type = internal/cpu
@@ -161,6 +167,7 @@ format-prefix = "% "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
+click-left = gnome-terminal -e "bash -c htop"
 
 [module/wlan]
 type = internal/network
@@ -193,7 +200,7 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "  %A  %d.%m.%Y"
+date = "  %A   %d.%m.%Y"
 time = %H:%M:%S
 
 format-prefix-foreground = ${colors.foreground-alt}
