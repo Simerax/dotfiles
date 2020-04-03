@@ -198,7 +198,7 @@ bindsym $mod+Tab mode "$mode_audio_control"
 
 
 bindsym $mod+ctrl+l exec i3lock -i ~/.config/images/lockscreen.png
-exec_always nitrogen --set-zoom-fill ~/.config/images/background.png
+exec_always nitrogen --set-zoom-fill ~/.config/images/background.jpg
 
 exec_always ~/.screenlayout/standard.sh
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
