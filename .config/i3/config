@@ -183,15 +183,15 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 
 
-set $mode_audio_control (r)aise (l)ower (m)ute Audio | (n)ext (p)revious (s)top/start
+set $mode_audio_control MPD Control: (r)aise (l)ower (n)ext (p)revious (s)top/start
 mode "$mode_audio_control" {
-    bindsym r exec --no-startup-id amixer -q sset Master 5%+
-    bindsym l exec --no-startup-id amixer -q sset Master 5%-
-    bindsym m exec --no-startup-id amixer -q sset Master toggle
+    bindsym r exec --no-startup-id mpc volume +5
+    bindsym l exec --no-startup-id mpc volume -5
     bindsym n exec --no-startup-id mpc next
     bindsym p exec --no-startup-id mpc prev
     bindsym s exec --no-startup-id mpc toggle
     bindsym Escape mode "default"
+    bindsym Tab mode "default"
 }
 bindsym $mod+Tab mode "$mode_audio_control"
 
