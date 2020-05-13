@@ -70,4 +70,5 @@ autocmd Filetype crystal setlocal ts=2 sw=2 expandtab
 " Perl Language Settings
 autocmd BufRead *.t set filetype=perl
 
-
+" NeoVim does not reset the cursor style on exit
+au VimLeave * set guicursor=a:hor100
