@@ -23,6 +23,9 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 
+Plug 'arakashic/chromatica.nvim'
+Plug 'arcticicestudio/nord-vim'
+
 call plug#end()
 filetype plugin indent on
 
@@ -30,7 +33,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 syntax on
-colo onehalfdark
+colo nord
 set cursorline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='onehalfdark'
@@ -65,3 +68,6 @@ autocmd BufRead *.t set filetype=perl
 
 " NeoVim does not reset the cursor style on exit
 au VimLeave * set guicursor=a:hor100
+
+let g:chromatica#libclang_path='/usr/lib64/'
+let g:chromatica#enable_at_startup=1
