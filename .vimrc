@@ -1,37 +1,30 @@
-" FOLLOWING LINES ARE REQUIRED BY VUNDLE.VIM !!
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+call plug#begin()
+Plug 'VundleVim/Vundle.vim'
 
-" All PLUGINS NEED TO BE BETWEEN vundle#begin() AND vundle#end() !!
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'rust-lang/rust.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'joshdick/onedark.vim'
-Plugin 'sainnhe/edge'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'rhysd/vim-crystal'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'igankevich/mesonic'
-Plugin 'neoclide/coc.nvim', {'pinned': 1}
-Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'rust-lang/rust.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/edge'
+Plug 'elixir-editors/vim-elixir'
+Plug 'rhysd/vim-crystal'
+Plug 'slashmili/alchemist.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'igankevich/mesonic'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " MarcWeber/vim-addon-mw-utils & tomtom/tlib_vim are dependencies of
 " garbas/vim-snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
-" VUNDLE.VIM END
 
 set tabstop=4
 set shiftwidth=4
