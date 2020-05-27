@@ -23,7 +23,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 
-Plug 'arakashic/chromatica.nvim'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
@@ -68,6 +68,3 @@ autocmd BufRead *.t set filetype=perl
 
 " NeoVim does not reset the cursor style on exit
 au VimLeave * set guicursor=a:hor100
-
-let g:chromatica#libclang_path='/usr/lib64/'
-let g:chromatica#enable_at_startup=1
