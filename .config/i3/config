@@ -243,7 +243,7 @@ bindsym $mod+p exec emoji_finder.sh
 exec compton
 exec redshift
 
-gaps inner 15
-gaps outer 15
+gaps inner 9
+gaps outer 9
 
 for_window [class=".*"] border pixel 1 # remove border - but mostly for top bar
