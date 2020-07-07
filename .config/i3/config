@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+set $filemanager "nautilus"
+set $screenshot_app "gnome-screenshot"
+
 set $font "Hack"
 set $font_size 13
 set $font_size_status_bar 15
@@ -230,7 +233,8 @@ client.urgent           $urgent_bg_color    $urgent_bg_color    $text_color     
 
 
 bindsym $mod+d exec rofi -show run -theme ~/.config/rofi/themes/flat-orange.rasi
-bindsym $mod+x exec i3-sensible-terminal -e "bash -c ncmpcpp"
+bindsym F12 exec --no-startup-id $screenshot_app
+bindsym F2 exec --no-startup-id $filemanager
 bindsym $mod+m exec --no-startup-id ~/.config/rofi/scripts/mpd.sh
 bindsym $mod+p exec emoji_finder.sh
 
