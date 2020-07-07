@@ -199,7 +199,7 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "  %A   %d.%m.%Y"
+date = "  %A   %d.%m.%Y - KW %U"
 time = %H:%M:%S
 
 format-prefix-foreground = ${colors.foreground-alt}
