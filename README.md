@@ -23,7 +23,7 @@ this only applies if you want to use the i3 config
 * [nitrogen](https://github.com/l3ib/nitrogen) (background images)
 
 #### Nice to have
-* i3lock
+* [i3lock](https://i3wm.org/i3lock/)
 * [compton](https://github.com/chjj/compton)
 * [redshift](https://github.com/jonls/redshift)
 * [mpd](https://www.musicpd.org/)
