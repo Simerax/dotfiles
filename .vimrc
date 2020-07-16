@@ -25,6 +25,7 @@ Plug 'garbas/vim-snipmate'
 
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'arcticicestudio/nord-vim'
+Plug 'sbdchd/neoformat'
 
 call plug#end()
 filetype plugin indent on
@@ -61,6 +62,13 @@ map <C-n> :NERDTreeToggle<CR>
 " Crystal Language Settings
 let g:crystal_auto_format=1
 autocmd Filetype crystal setlocal ts=2 sw=2 expandtab
+
+" Neoformat
+let g:neoformat_cpp_clangformat = {'exe': 'clang-format','args': ['--style=LLVM'] }
+
+let g:neoformat_enabled_cpp = ['clangformat']
+let g:neoformat_enabled_c = ['clangformat']
+nnoremap <F3> :Neoformat<CR>
 
 
 " Perl Language Settings
