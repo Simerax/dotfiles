@@ -2,7 +2,6 @@
 
 theme=~/.config/rofi/themes/flat-orange.rasi
 
-# sort -r um songs von spotify vor soundcloud anzuzeigen
 songs=$(rofi -dmenu -theme $theme | xargs -I{} mpc -f "%artist% - %title% <%file%>" search any \"{}\")
 
 
