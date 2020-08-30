@@ -12,5 +12,6 @@ then
     then
         mpc insert $selected_song
         mpc next
+        mpc play
     fi
 fi
