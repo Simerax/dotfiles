@@ -199,6 +199,7 @@ mode "$mode_audio_control" {
     bindsym n exec --no-startup-id mpc next
     bindsym p exec --no-startup-id mpc prev
     bindsym s exec --no-startup-id mpc toggle
+    bindsym space exec --no-startup-id mpc toggle
     bindsym d exec --no-startup-id ~/.config/scripts/mpd_search.sh; mode "default"
     bindsym Escape mode "default"
     bindsym Tab mode "default"
