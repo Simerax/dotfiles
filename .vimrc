@@ -27,6 +27,13 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sbdchd/neoformat'
 
+
+set termguicolors
+Plug 'ayu-theme/ayu-vim'
+
+" light, mirage or dark
+let ayucolor="mirage" 
+
 call plug#end()
 filetype plugin indent on
 
@@ -34,10 +41,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 syntax on
-colo nord
+colo ayu
 set cursorline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onehalfdark'
+" let g:airline_theme='onehalfdark'
+let g:airline_theme='ayu'
 set number relativenumber
 
 command RebuildTags execute "!ctags -R ."
