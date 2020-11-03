@@ -1,3 +1,5 @@
+# Moved to [Gitlab](https://gitlab.com/Simerax/dotfiles)
+
 # dotfiles
 
 repository to keep my dotfiles
